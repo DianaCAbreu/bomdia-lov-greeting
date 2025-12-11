@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  ReferenceLine,
+  LabelList,
 } from "recharts";
 import { ProductionDay } from "@/data/productionData";
 
@@ -38,6 +38,23 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null;
 };
 
+const renderCustomLabel = (props: any) => {
+  const { x, y, width, value } = props;
+  if (value === null || value === undefined) return null;
+  return (
+    <text
+      x={x + width / 2}
+      y={y - 5}
+      fill="hsl(215 15% 65%)"
+      textAnchor="middle"
+      fontSize={10}
+      fontWeight={500}
+    >
+      {value.toFixed(0)}
+    </text>
+  );
+};
+
 export const ProductionChart = ({
   data,
   title,
@@ -58,7 +75,7 @@ export const ProductionChart = ({
     <div className="rounded-xl border border-border bg-card p-6">
       <h3 className="mb-4 text-lg font-semibold text-foreground">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+        <BarChart data={chartData} margin={{ top: 25, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(220 15% 20%)" />
           <XAxis 
             dataKey="date" 
@@ -82,12 +99,16 @@ export const ProductionChart = ({
             fill={previstoColor} 
             radius={[4, 4, 0, 0]}
             opacity={0.7}
-          />
+          >
+            <LabelList content={renderCustomLabel} />
+          </Bar>
           <Bar 
             dataKey={realizadoLabel} 
             fill={realizadoColor} 
             radius={[4, 4, 0, 0]}
-          />
+          >
+            <LabelList content={renderCustomLabel} />
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>

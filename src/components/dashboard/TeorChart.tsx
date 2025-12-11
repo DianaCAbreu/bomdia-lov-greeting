@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  ReferenceLine,
+  LabelList,
 } from "recharts";
 import { ProductionDay } from "@/data/productionData";
 
@@ -32,6 +32,23 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null;
 };
 
+const renderCustomLabel = (props: any) => {
+  const { x, y, value } = props;
+  if (value === null || value === undefined) return null;
+  return (
+    <text
+      x={x}
+      y={y - 10}
+      fill="hsl(215 15% 65%)"
+      textAnchor="middle"
+      fontSize={10}
+      fontWeight={500}
+    >
+      {value.toFixed(2)}%
+    </text>
+  );
+};
+
 export const TeorChart = ({ data, title }: TeorChartProps) => {
   const chartData = data.map((day) => ({
     date: day.date,
@@ -45,7 +62,7 @@ export const TeorChart = ({ data, title }: TeorChartProps) => {
     <div className="rounded-xl border border-border bg-card p-6">
       <h3 className="mb-4 text-lg font-semibold text-foreground">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+        <LineChart data={chartData} margin={{ top: 25, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(220 15% 20%)" />
           <XAxis 
             dataKey="date" 
@@ -80,7 +97,9 @@ export const TeorChart = ({ data, title }: TeorChartProps) => {
             strokeWidth={2}
             dot={{ fill: "hsl(200 30% 70%)", r: 4 }}
             activeDot={{ r: 6 }}
-          />
+          >
+            <LabelList content={renderCustomLabel} />
+          </Line>
           <Line 
             type="monotone"
             dataKey="Teor Pb Previsto" 
@@ -96,7 +115,9 @@ export const TeorChart = ({ data, title }: TeorChartProps) => {
             strokeWidth={2}
             dot={{ fill: "hsl(220 12% 55%)", r: 4 }}
             activeDot={{ r: 6 }}
-          />
+          >
+            <LabelList content={renderCustomLabel} />
+          </Line>
         </LineChart>
       </ResponsiveContainer>
     </div>
