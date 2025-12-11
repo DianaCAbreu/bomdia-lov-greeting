@@ -127,12 +127,12 @@ const Index = () => {
 
         {/* Teor Chart */}
         <section className="mb-8">
-          <TeorChart data={weeklyRealized} title="Evolução dos Teores - Zinco e Chumbo" />
+          <TeorChart data={displayData} title="Evolução dos Teores - Zinco e Chumbo" />
         </section>
 
         {/* Comparison Table */}
         <section className="mb-8">
-          <ComparisonTable data={productionData} />
+          <ComparisonTable data={displayData} />
         </section>
       </main>
     </div>
