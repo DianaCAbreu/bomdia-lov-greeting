@@ -28,10 +28,29 @@ const Index = () => {
     ? realizedData 
     : displayData.filter(d => d.zincRealizado !== null);
 
+  // Cálculos baseados no período selecionado
+  const periodZincRealized = weeklyRealized.reduce((acc, d) => acc + (d.zincRealizado || 0), 0);
+  const periodZincPrevisto = displayData.filter(d => d.zincRealizado !== null).reduce((acc, d) => acc + d.zincPrevisto, 0);
+  const periodChumboRealized = weeklyRealized.reduce((acc, d) => acc + (d.chumboRealizado || 0), 0);
+  const periodChumboPrevisto = displayData.filter(d => d.chumboRealizado !== null).reduce((acc, d) => acc + d.chumboPrevisto, 0);
+  const periodDesenvRealized = weeklyRealized.reduce((acc, d) => acc + (d.desenvolvRealizado || 0), 0);
+  const periodDesenvPrevisto = displayData.filter(d => d.desenvolvRealizado !== null).reduce((acc, d) => acc + (d.desenvolvPrevisto || 0), 0);
+  const periodTeorZn = weeklyRealized.length > 0 
+    ? weeklyRealized.reduce((acc, d) => acc + (d.teorZnRealizado || 0), 0) / weeklyRealized.length 
+    : 0;
+  const periodTeorZnPrevisto = displayData.filter(d => d.teorZnRealizado !== null).length > 0
+    ? displayData.filter(d => d.teorZnRealizado !== null).reduce((acc, d) => acc + d.teorZnPrevisto, 0) / displayData.filter(d => d.teorZnRealizado !== null).length
+    : monthlyTotals.teorZnPrevisto;
+
+  // Cálculo de desempenho percentual
+  const zincPerformance = periodZincPrevisto > 0 ? ((periodZincRealized / periodZincPrevisto) * 100) : 0;
+  const chumboPerformance = periodChumboPrevisto > 0 ? ((periodChumboRealized / periodChumboPrevisto) * 100) : 0;
+  const desenvPerformance = periodDesenvPrevisto > 0 ? ((periodDesenvRealized / periodDesenvPrevisto) * 100) : 0;
+  const teorPerformance = periodTeorZnPrevisto > 0 ? ((periodTeorZn / periodTeorZnPrevisto) * 100) : 0;
+
+  // Totais gerais para projeção
   const currentZinc = realizedData.reduce((acc, d) => acc + (d.zincRealizado || 0), 0);
   const currentChumbo = realizedData.reduce((acc, d) => acc + (d.chumboRealizado || 0), 0);
-  const currentDesenv = realizedData.reduce((acc, d) => acc + (d.desenvolvRealizado || 0), 0);
-  const avgTeorZn = realizedData.reduce((acc, d) => acc + (d.teorZnRealizado || 0), 0) / realizedData.length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -41,34 +60,36 @@ const Index = () => {
         {/* KPI Cards */}
         <section className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
-            title="Zinco Produzido"
-            value={`${currentZinc.toFixed(0)} t`}
-            subtitle={`Meta: ${monthlyTotals.zincPrevisto} t`}
+            title={selectedWeek === 0 ? "Zinco Produzido" : `Zinco - Semana ${selectedWeek}`}
+            value={`${periodZincRealized.toFixed(0)} t`}
+            subtitle={`Previsto: ${periodZincPrevisto.toFixed(0)} t`}
             icon={Pickaxe}
             variant="zinc"
-            trend={{ value: Number(((currentZinc / monthlyTotals.zincPrevisto) * 100).toFixed(1)), isPositive: true }}
+            trend={{ value: Number(zincPerformance.toFixed(1)), isPositive: zincPerformance >= 100 }}
           />
           <MetricCard
-            title="Chumbo Produzido"
-            value={`${currentChumbo.toFixed(0)} t`}
-            subtitle={`Meta: ${monthlyTotals.chumboPrevisto} t`}
+            title={selectedWeek === 0 ? "Chumbo Produzido" : `Chumbo - Semana ${selectedWeek}`}
+            value={`${periodChumboRealized.toFixed(0)} t`}
+            subtitle={`Previsto: ${periodChumboPrevisto.toFixed(0)} t`}
             icon={Target}
             variant="lead"
-            trend={{ value: Number(((currentChumbo / monthlyTotals.chumboPrevisto) * 100).toFixed(1)), isPositive: true }}
+            trend={{ value: Number(chumboPerformance.toFixed(1)), isPositive: chumboPerformance >= 100 }}
           />
           <MetricCard
-            title="Desenvolvimento"
-            value={`${currentDesenv.toFixed(1)} m`}
-            subtitle={`Meta: ${monthlyTotals.desenvolvPrevisto} m`}
+            title={selectedWeek === 0 ? "Desenvolvimento" : `Desenv. - Semana ${selectedWeek}`}
+            value={`${periodDesenvRealized.toFixed(1)} m`}
+            subtitle={`Previsto: ${periodDesenvPrevisto.toFixed(1)} m`}
             icon={Ruler}
             variant="warning"
+            trend={periodDesenvPrevisto > 0 ? { value: Number(desenvPerformance.toFixed(1)), isPositive: desenvPerformance >= 100 } : undefined}
           />
           <MetricCard
-            title="Teor Médio Zn"
-            value={`${avgTeorZn.toFixed(2)}%`}
-            subtitle={`Previsto: ${monthlyTotals.teorZnPrevisto}%`}
+            title={selectedWeek === 0 ? "Teor Médio Zn" : `Teor Zn - Semana ${selectedWeek}`}
+            value={`${periodTeorZn.toFixed(2)}%`}
+            subtitle={`Previsto: ${periodTeorZnPrevisto.toFixed(2)}%`}
             icon={Percent}
             variant="success"
+            trend={{ value: Number(teorPerformance.toFixed(1)), isPositive: teorPerformance >= 100 }}
           />
         </section>
 
