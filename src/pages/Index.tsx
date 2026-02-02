@@ -28,19 +28,17 @@ const Index = () => {
     ? realizedData 
     : displayData.filter(d => d.zincRealizado !== null);
 
-  // Cálculos baseados no período selecionado
+  // Cálculos baseados no período selecionado - Totais Previstos incluem todos os dias do período
   const periodZincRealized = weeklyRealized.reduce((acc, d) => acc + (d.zincRealizado || 0), 0);
-  const periodZincPrevisto = displayData.filter(d => d.zincRealizado !== null).reduce((acc, d) => acc + d.zincPrevisto, 0);
+  const periodZincPrevisto = displayData.reduce((acc, d) => acc + d.zincPrevisto, 0);
   const periodChumboRealized = weeklyRealized.reduce((acc, d) => acc + (d.chumboRealizado || 0), 0);
-  const periodChumboPrevisto = displayData.filter(d => d.chumboRealizado !== null).reduce((acc, d) => acc + d.chumboPrevisto, 0);
-  const periodDesenvRealized = weeklyRealized.reduce((acc, d) => acc + (d.desenvolvRealizado || 0), 0);
-  const periodDesenvPrevisto = displayData.filter(d => d.desenvolvRealizado !== null).reduce((acc, d) => acc + (d.desenvolvPrevisto || 0), 0);
+  const periodChumboPrevisto = displayData.reduce((acc, d) => acc + d.chumboPrevisto, 0);
+  const periodDesenvRealized = displayData.reduce((acc, d) => acc + (d.desenvolvRealizado || 0), 0);
+  const periodDesenvPrevisto = displayData.reduce((acc, d) => acc + (d.desenvolvPrevisto || 0), 0);
   const periodTeorZn = weeklyRealized.length > 0 
     ? weeklyRealized.reduce((acc, d) => acc + (d.teorZnRealizado || 0), 0) / weeklyRealized.length 
     : 0;
-  const periodTeorZnPrevisto = displayData.filter(d => d.teorZnRealizado !== null).length > 0
-    ? displayData.filter(d => d.teorZnRealizado !== null).reduce((acc, d) => acc + d.teorZnPrevisto, 0) / displayData.filter(d => d.teorZnRealizado !== null).length
-    : monthlyTotals.teorZnPrevisto;
+  const periodTeorZnPrevisto = monthlyTotals.teorZnPrevisto;
 
   // Cálculo de desempenho percentual
   const zincPerformance = periodZincPrevisto > 0 ? ((periodZincRealized / periodZincPrevisto) * 100) : 0;
