@@ -14,50 +14,68 @@ export interface ProductionDay {
 }
 
 export const productionData: ProductionDay[] = [
-  { dayOfWeek: "Seg", date: "01/12", zincPrevisto: 148, zincRealizado: 149.42, chumboPrevisto: 30, chumboRealizado: 31.88, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.50, teorZnPrevisto: 14.30, teorZnRealizado: 15.81, teorPbPrevisto: 3.08, teorPbRealizado: 3.82 },
-  { dayOfWeek: "Ter", date: "02/12", zincPrevisto: 148, zincRealizado: 156.02, chumboPrevisto: 30, chumboRealizado: 32.80, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: 15.32, teorPbPrevisto: 3.08, teorPbRealizado: 3.39 },
-  { dayOfWeek: "Qua", date: "03/12", zincPrevisto: 148, zincRealizado: 154.87, chumboPrevisto: 30, chumboRealizado: 19.85, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: 15.64, teorPbPrevisto: 3.08, teorPbRealizado: 2.89 },
-  { dayOfWeek: "Qui", date: "04/12", zincPrevisto: 148, zincRealizado: 146.13, chumboPrevisto: 30, chumboRealizado: 32.25, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.50, teorZnPrevisto: 14.30, teorZnRealizado: 15.16, teorPbPrevisto: 3.08, teorPbRealizado: 3.74 },
-  { dayOfWeek: "Sex", date: "05/12", zincPrevisto: 148, zincRealizado: 147.27, chumboPrevisto: 30, chumboRealizado: 33.33, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: 14.80, teorPbPrevisto: 3.08, teorPbRealizado: 3.85 },
-  { dayOfWeek: "Sáb", date: "06/12", zincPrevisto: 148, zincRealizado: 144.75, chumboPrevisto: 30, chumboRealizado: 28.49, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: 16.23, teorPbPrevisto: 3.08, teorPbRealizado: 3.72 },
-  { dayOfWeek: "Dom", date: "07/12", zincPrevisto: 148, zincRealizado: 147.85, chumboPrevisto: 30, chumboRealizado: 34.05, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.50, teorZnPrevisto: 14.30, teorZnRealizado: 13.78, teorPbPrevisto: 3.08, teorPbRealizado: 3.44 },
-  { dayOfWeek: "Seg", date: "08/12", zincPrevisto: 148, zincRealizado: 139.36, chumboPrevisto: 30, chumboRealizado: 34.92, desenvolvPrevisto: null, desenvolvRealizado: 3.50, teorZnPrevisto: 14.30, teorZnRealizado: 13.83, teorPbPrevisto: 3.08, teorPbRealizado: 3.72 },
-  { dayOfWeek: "Ter", date: "09/12", zincPrevisto: 148, zincRealizado: 145.93, chumboPrevisto: 30, chumboRealizado: 35.59, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: 14.74, teorPbPrevisto: 3.08, teorPbRealizado: 4.18 },
-  { dayOfWeek: "Qua", date: "10/12", zincPrevisto: 148, zincRealizado: 137.44, chumboPrevisto: 30, chumboRealizado: 23.25, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.50, teorZnPrevisto: 14.30, teorZnRealizado: 14.63, teorPbPrevisto: 3.08, teorPbRealizado: 3.13 },
-  { dayOfWeek: "Qui", date: "11/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Sex", date: "12/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Sáb", date: "13/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Dom", date: "14/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Seg", date: "15/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Ter", date: "16/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Qua", date: "17/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Qui", date: "18/12", zincPrevisto: 63, zincRealizado: null, chumboPrevisto: 13, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Sex", date: "19/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Sáb", date: "20/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Dom", date: "21/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Seg", date: "22/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Ter", date: "23/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Qua", date: "24/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Qui", date: "25/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Sex", date: "26/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Sáb", date: "27/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Dom", date: "28/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Seg", date: "29/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Ter", date: "30/12", zincPrevisto: 148, zincRealizado: null, chumboPrevisto: 30, chumboRealizado: null, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
-  { dayOfWeek: "Qua", date: "31/12", zincPrevisto: 145, zincRealizado: null, chumboPrevisto: 29, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 14.30, teorZnRealizado: null, teorPbPrevisto: 3.08, teorPbRealizado: null },
+  // Semana 1
+  { dayOfWeek: "Qui", date: "01/01", zincPrevisto: 143.06, zincRealizado: 150.8, chumboPrevisto: 29.00, chumboRealizado: 29.6, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 15.40, teorPbPrevisto: 2.96, teorPbRealizado: 3.99 },
+  { dayOfWeek: "Sex", date: "02/01", zincPrevisto: 143.06, zincRealizado: 140.9, chumboPrevisto: 29.00, chumboRealizado: 27.2, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 14.89, teorPbPrevisto: 2.96, teorPbRealizado: 3.10 },
+  { dayOfWeek: "Sáb", date: "03/01", zincPrevisto: 140.85, zincRealizado: 148.4, chumboPrevisto: 28.55, chumboRealizado: 25.7, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 14.31, teorPbPrevisto: 2.96, teorPbRealizado: 3.27 },
+  { dayOfWeek: "Dom", date: "04/01", zincPrevisto: 140.85, zincRealizado: 150.0, chumboPrevisto: 28.55, chumboRealizado: 28.5, desenvolvPrevisto: 2.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 14.57, teorPbPrevisto: 2.96, teorPbRealizado: 3.66 },
+  { dayOfWeek: "Seg", date: "05/01", zincPrevisto: 140.85, zincRealizado: 144.3, chumboPrevisto: 28.55, chumboRealizado: 30.5, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 14.61, teorPbPrevisto: 2.96, teorPbRealizado: 3.75 },
+  { dayOfWeek: "Ter", date: "06/01", zincPrevisto: 140.85, zincRealizado: 147.1, chumboPrevisto: 28.55, chumboRealizado: 29.5, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 13.35, teorPbPrevisto: 2.96, teorPbRealizado: 3.18 },
+  { dayOfWeek: "Qua", date: "07/01", zincPrevisto: 140.85, zincRealizado: 148.4, chumboPrevisto: 28.55, chumboRealizado: 31.3, desenvolvPrevisto: null, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 14.55, teorPbPrevisto: 2.96, teorPbRealizado: 3.19 },
+  // Semana 2
+  { dayOfWeek: "Qui", date: "08/01", zincPrevisto: 56.86, zincRealizado: 61.8, chumboPrevisto: 11.53, chumboRealizado: 14.2, desenvolvPrevisto: 2.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 14.58, teorPbPrevisto: 2.96, teorPbRealizado: 3.73 },
+  { dayOfWeek: "Sex", date: "09/01", zincPrevisto: 140.85, zincRealizado: 146.25, chumboPrevisto: 28.55, chumboRealizado: 30.06, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 13.71, teorPbPrevisto: 2.96, teorPbRealizado: 3.42 },
+  { dayOfWeek: "Sáb", date: "10/01", zincPrevisto: 140.85, zincRealizado: 143.94, chumboPrevisto: 28.55, chumboRealizado: 33.06, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 13.71, teorPbPrevisto: 2.96, teorPbRealizado: 3.54 },
+  { dayOfWeek: "Dom", date: "11/01", zincPrevisto: 140.85, zincRealizado: 148.04, chumboPrevisto: 28.55, chumboRealizado: 27.86, desenvolvPrevisto: null, desenvolvRealizado: 7.0, teorZnPrevisto: 13.56, teorZnRealizado: 13.83, teorPbPrevisto: 2.96, teorPbRealizado: 3.75 },
+  { dayOfWeek: "Seg", date: "12/01", zincPrevisto: 140.85, zincRealizado: 150.65, chumboPrevisto: 28.55, chumboRealizado: 33.23, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 14.65, teorPbPrevisto: 2.96, teorPbRealizado: 4.55 },
+  { dayOfWeek: "Ter", date: "13/01", zincPrevisto: 140.85, zincRealizado: 154.08, chumboPrevisto: 28.55, chumboRealizado: 29.19, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 14.16, teorPbPrevisto: 2.96, teorPbRealizado: 3.56 },
+  { dayOfWeek: "Qua", date: "14/01", zincPrevisto: 140.85, zincRealizado: 153.05, chumboPrevisto: 28.55, chumboRealizado: 31.33, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 15.79, teorPbPrevisto: 2.96, teorPbRealizado: 3.43 },
+  // Semana 3
+  { dayOfWeek: "Qui", date: "15/01", zincPrevisto: 140.85, zincRealizado: 145.41, chumboPrevisto: 28.55, chumboRealizado: 29.18, desenvolvPrevisto: 3.5, desenvolvRealizado: 7.0, teorZnPrevisto: 13.56, teorZnRealizado: 15.44, teorPbPrevisto: 2.96, teorPbRealizado: 3.50 },
+  { dayOfWeek: "Sex", date: "16/01", zincPrevisto: 140.85, zincRealizado: 154.28, chumboPrevisto: 28.55, chumboRealizado: 28.4, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 16.26, teorPbPrevisto: 2.96, teorPbRealizado: 4.72 },
+  { dayOfWeek: "Sáb", date: "17/01", zincPrevisto: 140.85, zincRealizado: 143.66, chumboPrevisto: 28.55, chumboRealizado: 26.2, desenvolvPrevisto: null, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 15.66, teorPbPrevisto: 2.96, teorPbRealizado: 3.71 },
+  { dayOfWeek: "Dom", date: "18/01", zincPrevisto: 140.85, zincRealizado: 153.31, chumboPrevisto: 28.55, chumboRealizado: 29.49, desenvolvPrevisto: 3.5, desenvolvRealizado: 7.0, teorZnPrevisto: 13.56, teorZnRealizado: 15.40, teorPbPrevisto: 2.96, teorPbRealizado: 3.28 },
+  { dayOfWeek: "Seg", date: "19/01", zincPrevisto: 140.85, zincRealizado: 147.58, chumboPrevisto: 28.55, chumboRealizado: 26.53, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 15.55, teorPbPrevisto: 2.96, teorPbRealizado: 3.17 },
+  { dayOfWeek: "Ter", date: "20/01", zincPrevisto: 140.85, zincRealizado: 149.94, chumboPrevisto: 28.55, chumboRealizado: 29.31, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 15.39, teorPbPrevisto: 2.96, teorPbRealizado: 2.93 },
+  { dayOfWeek: "Qua", date: "21/01", zincPrevisto: 140.85, zincRealizado: 145.14, chumboPrevisto: 28.55, chumboRealizado: 27.86, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 14.68, teorPbPrevisto: 2.96, teorPbRealizado: 3.18 },
+  // Semana 4
+  { dayOfWeek: "Qui", date: "22/01", zincPrevisto: 56.86, zincRealizado: 62.73, chumboPrevisto: 11.53, chumboRealizado: 18.42, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 13.48, teorPbPrevisto: 2.96, teorPbRealizado: 3.20 },
+  { dayOfWeek: "Sex", date: "23/01", zincPrevisto: 140.85, zincRealizado: 148.93, chumboPrevisto: 28.55, chumboRealizado: 28.12, desenvolvPrevisto: null, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 15.71, teorPbPrevisto: 2.96, teorPbRealizado: 3.46 },
+  { dayOfWeek: "Sáb", date: "24/01", zincPrevisto: 140.85, zincRealizado: 149.47, chumboPrevisto: 28.55, chumboRealizado: 26.63, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 15.09, teorPbPrevisto: 2.96, teorPbRealizado: 3.67 },
+  { dayOfWeek: "Dom", date: "25/01", zincPrevisto: 140.85, zincRealizado: 147.99, chumboPrevisto: 28.55, chumboRealizado: 29.9, desenvolvPrevisto: null, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 14.50, teorPbPrevisto: 2.96, teorPbRealizado: 3.40 },
+  { dayOfWeek: "Seg", date: "26/01", zincPrevisto: 140.85, zincRealizado: 143.82, chumboPrevisto: 28.55, chumboRealizado: 25.31, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 15.11, teorPbPrevisto: 2.96, teorPbRealizado: 3.51 },
+  { dayOfWeek: "Ter", date: "27/01", zincPrevisto: 140.85, zincRealizado: 141.23, chumboPrevisto: 28.55, chumboRealizado: 23.06, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 12.74, teorPbPrevisto: 2.96, teorPbRealizado: 2.49 },
+  { dayOfWeek: "Qua", date: "28/01", zincPrevisto: 140.85, zincRealizado: 150.59, chumboPrevisto: 28.55, chumboRealizado: 27.02, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 12.83, teorPbPrevisto: 2.96, teorPbRealizado: 2.95 },
+  // Semana 5
+  { dayOfWeek: "Qui", date: "29/01", zincPrevisto: 140.85, zincRealizado: 141.65, chumboPrevisto: 28.55, chumboRealizado: 25.53, desenvolvPrevisto: null, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: 12.83, teorPbPrevisto: 2.96, teorPbRealizado: 2.95 },
+  { dayOfWeek: "Sex", date: "30/01", zincPrevisto: 140.85, zincRealizado: 149.64, chumboPrevisto: 28.55, chumboRealizado: 28.56, desenvolvPrevisto: 3.5, desenvolvRealizado: 3.5, teorZnPrevisto: 13.56, teorZnRealizado: 12.83, teorPbPrevisto: 2.96, teorPbRealizado: 2.95 },
+  { dayOfWeek: "Sáb", date: "31/01", zincPrevisto: 138.08, zincRealizado: null, chumboPrevisto: 28.00, chumboRealizado: null, desenvolvPrevisto: 3.5, desenvolvRealizado: null, teorZnPrevisto: 13.56, teorZnRealizado: null, teorPbPrevisto: 2.96, teorPbRealizado: null },
 ];
 
+// Cálculo dos totais mensais baseados nos dados reais
+const realizedData = productionData.filter(d => d.zincRealizado !== null);
+const totalZincPrevisto = productionData.reduce((acc, d) => acc + d.zincPrevisto, 0);
+const totalZincRealizado = realizedData.reduce((acc, d) => acc + (d.zincRealizado || 0), 0);
+const totalChumboPrevisto = productionData.reduce((acc, d) => acc + d.chumboPrevisto, 0);
+const totalChumboRealizado = realizedData.reduce((acc, d) => acc + (d.chumboRealizado || 0), 0);
+const totalDesenvPrevisto = productionData.reduce((acc, d) => acc + (d.desenvolvPrevisto || 0), 0);
+const totalDesenvRealizado = productionData.reduce((acc, d) => acc + (d.desenvolvRealizado || 0), 0);
+const avgTeorZnPrevisto = productionData.reduce((acc, d) => acc + d.teorZnPrevisto, 0) / productionData.length;
+const avgTeorZnRealizado = realizedData.reduce((acc, d) => acc + (d.teorZnRealizado || 0), 0) / realizedData.length;
+const avgTeorPbPrevisto = productionData.reduce((acc, d) => acc + d.teorPbPrevisto, 0) / productionData.length;
+const avgTeorPbRealizado = realizedData.reduce((acc, d) => acc + (d.teorPbRealizado || 0), 0) / realizedData.length;
+
 export const monthlyTotals = {
-  zincPrevisto: 4500,
-  zincRealizado: 1469.04,
-  chumboPrevisto: 912,
-  chumboRealizado: 306.41,
-  desenvolvPrevisto: 38.5,
-  desenvolvRealizado: 17.5,
-  teorZnPrevisto: 14.30,
-  teorZnRealizado: 14.99,
-  teorPbPrevisto: 3.08,
-  teorPbRealizado: 3.59,
+  zincPrevisto: totalZincPrevisto,
+  zincRealizado: totalZincRealizado,
+  chumboPrevisto: totalChumboPrevisto,
+  chumboRealizado: totalChumboRealizado,
+  desenvolvPrevisto: totalDesenvPrevisto,
+  desenvolvRealizado: totalDesenvRealizado,
+  teorZnPrevisto: avgTeorZnPrevisto,
+  teorZnRealizado: avgTeorZnRealizado,
+  teorPbPrevisto: avgTeorPbPrevisto,
+  teorPbRealizado: avgTeorPbRealizado,
 };
 
 // Helper functions

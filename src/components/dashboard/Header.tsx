@@ -21,7 +21,7 @@ export const Header = () => {
                 Acompanhamento de Produção
               </h1>
               <p className="text-sm text-muted-foreground">
-                Mineração de Zinco & Chumbo • Dezembro 2024
+                Mineração de Zinco & Chumbo • Janeiro 2026
               </p>
             </div>
           </div>
